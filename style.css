@@ -1,0 +1,487 @@
+/* ADD ATRIBUTOS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Jost', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* COLOCANDO LOGO E MENUS NAO PARTE SUPERIOR */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+}
+
+/* TAMANHO DO LOGO */
+.logo img {
+    max-width: 120px;
+    height: auto;
+}
+
+/* OS NOME DO MENU NA HORIZONTAL */
+.navmenu {
+    display: flex;
+}
+
+/* COR DO MENU CENTRAL, ESPAÇAMENTO E TAMANHO DA FONTE */
+.navmenu a {
+    color: #2c2c2c;
+    font-size: 16px;
+    text-decoration: capitalize;
+    padding: 10px 20px;
+    font-weight: 400;
+    /* ANIMAÇAO */
+    transition: all .42s ease;
+}
+
+/* AÇAO DE PASSAR O MAUSE A COR MUDAR DO MENU CENTRAL */
+.navmenu a:hover {
+    color: #EE1c47;
+}
+
+/* ALIANDO ITENS MENU DIREITO */
+.nav-icon {
+    display: flex;
+    align-items: center;
+}
+
+/* MANHO E ESPAÇAMENTO MENU DIREITO */
+.nav-icon i {
+    margin-right: 20px;
+    color: #2c2c2c;
+    font-size: 25px;
+    font-weight: 400;
+    /* ANIMAÇAO */
+    transition: all .42s ease;
+}
+
+/* COR E AMPLIAÇAO QUANDO PASSAR O MAUSE */
+.nav-icon i:hover {
+    transform: scale(1.1);
+    color: #EE1c47;
+}
+
+/* TAMANHO E COR DA BARRA DE MENU */
+#menu-icon {
+    font-size: 35px;
+    color: #2c2c2c;
+    z-index: 10001;
+    cursor: pointer;
+}
+
+/* POSIÇAO DOS TEXTO, ABAIXO DA LOGO */
+section {
+    padding: 5% 10%;
+}
+
+/* COLOCANDO BANNER E SUA POSIÇAO E TAMANHO, E POSICIONANDO O TEXTO CENTRAL ABAIXO DA LOGO */
+.main-home {
+    width: 100%;
+    height: 100vh;
+    background-image: url(image/banner-3.png);
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+}
+
+/* COR DO TITULO SUPERIOR E SEU TAMANHO */
+.main-text h5 {
+    color: #EE1c47;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+/* TITULO PRINCIPAL, COR E TAMANHO E ESPAÇAMENTO */
+.main-text h1 {
+    color: #000;
+    font-size: 65px;
+    text-transform: capitalize;
+    line-height: 1.1;
+    font-weight: 600;
+    margin: 6px 0 10px;
+}
+
+/* ESTILO DA LETRA E COR E ESPAÇAMENTO "p" */
+.main-text p {
+    color: #333C56;
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* CRIANDO BOTAO */
+.main-btn {
+    display: inline-block;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    border: 2px solid #111;
+    padding: 12px 25px;
+    /* ANIMAÇAO */
+    transition: all .42s ease;
+}
+
+/* AÇAO QUANDO PASSAR O MAUSE NO BOTAO */
+.main-btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* ALIANDO A CETA NO MEIO DO TEXTO "botao" */
+.main-btn i {
+    vertical-align: middle;
+}
+
+/* POSIÇAO DA CETA */
+.down-arrow {
+    position: absolute;
+    top: 85%;
+    right: 11%;
+}
+
+/* CONSTRUINDO O BOTAO DO LADO ESQUERDO INFERIOR */
+.down i {
+    font-size: 30px;
+    color: #2c2c2c;
+    border: 2px solid #2c2c2c;
+    border-radius: 50px;
+    padding: 12px 12px;
+}
+
+/* ACAO DE PASSAR O MAUSE NO BOTAO */
+.down i:hover {
+    background-color: #2c2c2c;
+    color: #fff;
+    transition: all .42s ease;
+}
+
+/* BARRA ONDE VAI LOGO E MENUS FIXA NA COR BRANCA */
+header.stricky {
+    background: #fff;
+    padding: 20px 10%;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0 / 10%);
+}
+
+/* ------------- TRENDING SECTION CSS ------------ */
+/* CENTRELIZANDO TITULO NO CENTRO DA PAG E SUA COR */
+.center-text h2 {
+    color: #111;
+    font-size: 28px;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* COR DA METADE DO TITULO */
+.center-text span {
+    color: #EE1c47;
+}
+
+/* ALIANDO AS FOTOS EM COLUNAS DUAS COLUNAS HORIZONAL */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+    gap: 2rem;
+}
+
+/* ANIMAÇAO DA IMAGEM */
+.row {
+    position: relative;
+    transition: all .40s;
+}
+
+/* TAMANHO DA IMAGEM */
+.row img {
+    width: 100%;
+    height: auto;
+    /* ANIMAÇAO */
+    transition: all .40s;
+}
+
+/* TAMANHO DA IMAGEM QUE DIMINUI QUANDO PASSA O MAUSE */
+.row img:hover { 
+    transform: scale(0.9);
+}
+
+/* QUADRADO SUPERIOR NO CANTO ESQUERDO NA IMAGEM QUE DIS QUAL A NOVIDADE DO PRODUTO */
+.product-text h5 {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: #27b737;
+    padding: 3px 10px;
+    border-radius: 2px;
+}
+
+/* TAMANHO DO CORAÇAO E SUA POSIÇAO */
+.heart-icon {
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+}
+
+/* ACAO DE PASSAR O MAUSE E MUDAR DE COR CORAÇAO */
+.heart-icon:hover {
+    color: #EE1c47;
+}
+
+/* COR DAS ESTRELA E TAMANHO */
+.ratting {
+    color: #ff8c00;
+    font-size: 18px;
+}
+
+/* COR E ESTILO DO TEXTO QUE DESCREVE A IMAGEM */
+.price h4 {
+    color: #111;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+/* COR E TAMANHO DO $ */
+.price p {
+    color: #151515;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* ------- CLIENT REVIEWS -------- */
+/* COR DO FUNDO PAG CLIENTE */
+.client-reviews {
+    background-color: #F3F4F6;
+}
+
+/* CENTRALIZANDO OS ITENS */
+.reviews {
+    text-align: center;
+}
+
+/* TAMANHO NO TITULO COR */
+.reviews h3 {
+    color: #111;
+    font-size: 25px;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* IMAGEM PEQUENA, EM CIRCULO */
+.reviews img {
+    width: 100px;
+    height: auto;
+    border-radius: 50px;
+    margin: 10px 0;
+}
+
+/* COR DO TEXTO E ESPAÇAMENTO E TAMANHO */
+.reviews p {
+    color: #707070;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+
+/* COR DO NOME E TAMNHO DA FONTE E ESPAÇAMENTO */
+.reviews h2 {
+    font-size: 22px;
+    color: #000;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom: 2px;
+}
+
+/*------- UPDATE SECTION CSS ------*/
+/* POSIÇAO DO TITULO,COR TAMANHO E ESPAÇAMENTO */
+.up-center-text h2 {
+    text-align: center;
+    color: #111;
+    font-size: 25px;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/* TAMANHO DA IMG E BORDA */
+.cart img {
+    width: 380px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* POSIÇAO DA IMAGEM EM HORIZONTAL, TAMANHO E ESPAÇAMENTO */
+.update-cart {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, auto));
+    gap: 1rem;
+}
+
+/* COR E TAMANHO E ESPAÇAMENTO "data" */
+.cart h5 {
+    color: #636872;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+/* COR DO TITULO ABAIXO DA FOTO */
+.cart h4 {
+    color: #111;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* COR E ESPAÇAMENTO E TAMANHO DA LETRA DO TEXTO */
+.cart p {
+    color: #707070;
+    font-size: 15px;
+    max-width: 380px;
+    line-height: 25px;
+    margin-bottom: 12px;
+}
+
+/* COR E TAMANHO DA LETRA "reading" */
+.cart h6 {
+    color: #151515;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/*------- CONTACT SECTION -------*/
+/* COR DO FUNDO */
+.contact {
+    background-color: #F3F4F6;
+}
+
+/* COLOCANDO TODOS TEXTO HORIZONTAL EM COLUNA */
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+}
+
+/* TAMANHO DA LOGO */
+.first-info img {
+    width: 140px;
+    height: auto;
+}
+
+/* COR E E TAMANHO DE TODOS OS TITULOS E ESPAÇAMENTO */
+.contact-info h4 {
+    color: #212529;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* COR E TAMANHO E ESPAÇAMENTO DE TODOS SUBTITLOS */
+.contact-info p {
+    color: #565656;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    cursor: pointer;
+    /* ANIMAÇAO */
+    transition: all .42s;
+}
+
+/* ACAO DO MAUSE PASSAR TROCAR DE COR */
+.contact-info p:hover {
+    color: #EE1c47;
+}
+
+/* COR E ESPAÇAMENTO E TAMANHO */
+.social-icon i {
+    color: #565656;
+    margin-right: 10px;
+    font-size: 20px;
+    /* ANIMAÇAO */
+    transition: all .42s;
+}
+
+/* ACAO DE PASSAR O MAUSE O ICON ALMENTA */
+.social-icon i:hover {
+    transform: scale(1.3);
+}
+
+/* COR DO FUNDO POSIÇAO DO TEXTO E ESPAÇAMENTO */
+.end-text {
+    background-color: #edfff1;
+    text-align: center;
+    padding: 20px;
+}
+
+.end-text p {
+    color: #000;
+    text-transform: capitalize;
+}
+
+/*------- RESPONSIVE CSS -------*/
+@media (max-width:890px) {
+    header {
+        padding: 20px 3%;
+        transition: .4s;
+    }
+}
+
+@media (max-width: 630px) {
+    .main-text h1 {
+        font-size: 50px;
+        transition: .4s;
+    }
+
+    .main-text p {
+        font-size: 18px;
+        transition: .4s;
+    }
+
+    .main-btn {
+        padding: 10px 20px;
+        transition: .4s;
+    }
+}
+
+@media (max-width:750px) {
+    .navmenu {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        height: 130vh;
+        background: #edfff1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 120px 30px;
+        transition: all .42s;
+    }
+
+    .navmenu a {
+        display: block;
+        margin: 18px 0;
+    }
+
+    .navmenu.open {
+        right: 0;
+    }
+}
